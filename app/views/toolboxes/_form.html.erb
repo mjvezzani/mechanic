@@ -1,0 +1,25 @@
+<%= form_for(@toolbox) do |f| %>
+  <% if @toolbox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toolbox.errors.count, "error") %> prohibited this toolbox from being saved:</h2>
+
+      <ul>
+      <% @toolbox.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tool %><br>
+    <%= f.text_field :tool %>
+  </div>
+  <div class="field">
+    <%= f.label :mechanic %><br>
+    <%= f.text_field :mechanic %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

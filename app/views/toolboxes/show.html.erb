@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tool:</strong>
+  <%= @toolbox.tool %>
+</p>
+
+<p>
+  <strong>Mechanic:</strong>
+  <%= @toolbox.mechanic %>
+</p>
+
+<%= link_to 'Edit', edit_toolbox_path(@toolbox) %> |
+<%= link_to 'Back', toolboxes_path %>

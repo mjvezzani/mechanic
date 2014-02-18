@@ -1,0 +1,29 @@
+<h1>Listing toolboxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Mechanic</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @toolboxes.each do |toolbox| %>
+      <tr>
+        <td><%= toolbox.tool %></td>
+        <td><%= toolbox.mechanic %></td>
+        <td><%= link_to 'Show', toolbox %></td>
+        <td><%= link_to 'Edit', edit_toolbox_path(toolbox) %></td>
+        <td><%= link_to 'Destroy', toolbox, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Toolbox', new_toolbox_path %>
